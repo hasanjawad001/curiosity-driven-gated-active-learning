@@ -1,7 +1,7 @@
 ## cache
 .ipynb_checkpoints/
 
-## code
+## code & readme
 10_exp_spec2im_multiRun.ipynb
 11_exp_spec2im_multiRun.py
 12_exp_spec2im_results.ipynb
@@ -20,6 +20,7 @@ real_time_afm/analysis_im2spec.ipynb
 real_time_afm/execution_im2spec.ipynb
 real_time_afm/ models.py  
 real_time_afm/utils.py
+README.md
 
 ## data
 inputs/
