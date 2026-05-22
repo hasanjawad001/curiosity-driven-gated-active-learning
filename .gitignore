@@ -2,25 +2,25 @@
 .ipynb_checkpoints/
 
 ## code & readme
-10_exp_spec2im_multiRun.ipynb
-11_exp_spec2im_multiRun.py
-12_exp_spec2im_results.ipynb
-1_noise_induction.ipynb
-2_sho_fitting_clean_spectra.py
-3_sho_fitting_noisy_spectra.py
-4_phase_correction.ipynb
-5_exp_im2spec_soloRun.ipynb
-6_exp_im2spec_multiRun.ipynb
-7_exp_im2spec_multiRun.py
-8_exp_im2spec_results.ipynb
-9_exp_spec2im_soloRun.ipynb
-models.py
-utils.py
-real_time_afm/analysis_im2spec.ipynb  
-real_time_afm/execution_im2spec.ipynb
-real_time_afm/ models.py  
-real_time_afm/utils.py
-README.md
+#10_exp_spec2im_multiRun.ipynb
+#11_exp_spec2im_multiRun.py
+#12_exp_spec2im_results.ipynb
+#1_noise_induction.ipynb
+#2_sho_fitting_clean_spectra.py
+#3_sho_fitting_noisy_spectra.py
+#4_phase_correction.ipynb
+#5_exp_im2spec_soloRun.ipynb
+#6_exp_im2spec_multiRun.ipynb
+#7_exp_im2spec_multiRun.py
+#8_exp_im2spec_results.ipynb
+#9_exp_spec2im_soloRun.ipynb
+#models.py
+#utils.py
+#real_time_afm/analysis_im2spec.ipynb  
+#real_time_afm/execution_im2spec.ipynb
+#real_time_afm/ models.py  
+#real_time_afm/utils.py
+#README.md
 
 ## data
 inputs/
