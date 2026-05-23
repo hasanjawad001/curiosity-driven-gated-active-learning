@@ -5,6 +5,8 @@
 #10_exp_spec2im_multiRun.ipynb
 #11_exp_spec2im_multiRun.py
 #12_exp_spec2im_results.ipynb
+#13_exp_im2spec_sensitivity.py
+#14_exp_spec2im_sensitivity.py
 #1_noise_induction.ipynb
 #2_sho_fitting_clean_spectra.py
 #3_sho_fitting_noisy_spectra.py
@@ -16,8 +18,8 @@
 #9_exp_spec2im_soloRun.ipynb
 #models.py
 #utils.py
-#real_time_afm/analysis_im2spec.ipynb  
-#real_time_afm/execution_im2spec.ipynb
+real_time_afm/analysis_im2spec.ipynb  
+real_time_afm/execution_im2spec.ipynb
 #real_time_afm/ models.py  
 #real_time_afm/utils.py
 #README.md
