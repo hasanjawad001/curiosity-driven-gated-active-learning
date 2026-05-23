@@ -11,14 +11,13 @@ ActiveQC combines curiosity-driven acquisition with a physics-informed quality c
 - **Curiosity-driven sampling** that balances exploration and exploitation
 
 The method is evaluated on two bidirectional structure-property tasks:
-- **Im2Spec**: Image-to-Spectrum translation (AFM patch → BEPS spectrum)
-- **Spec2Im**: Spectrum-to-Image translation (BEPS spectrum → AFM patch)
+- **Im2Spec**: Image-to-Spectrum translation (PFM patch → BEPS spectrum)
+- **Spec2Im**: Spectrum-to-Image translation (BEPS spectrum → PFM patch)
 
 ## Data
 
 The experiments use paired structural and spectroscopic measurements from ferroelectric thin films:
-- **PbTiO3** thin films (pre-acquired BEPS dataset with simulated noise)
-- **BiFeO3** thin films (real-time AFM deployment)
+- **PbTiO3** thin films (pre-acquired BEPS dataset with simulated noise) and separate heterogeneous **PbTiO3** thin films with richer domain structures (real-time AFM deployment)
 
 Data should be placed in the `inputs/data/` directory. Download from: [TBD - DOI link to be added upon publication]
 
@@ -37,6 +36,8 @@ Data should be placed in the `inputs/data/` directory. Download from: [TBD - DOI
 ├── 10_exp_spec2im_multiRun.ipynb    # Spec2Im multi-trial experiments
 ├── 11_exp_spec2im_multiRun.py       # Spec2Im multi-trial (script version)
 ├── 12_exp_spec2im_results.ipynb     # Spec2Im results analysis
+├── 13_exp_im2spec_sensitivity.py    # sensitivity analysis with Im2Spec
+├── 14_exp_spec2im_sensitivity.py    # sensitivity analysis with Spec2Im
 ├── models.py                        # Neural network architectures
 ├── utils.py                         # Utility functions
 ├── inputs/                          # Input data directory
