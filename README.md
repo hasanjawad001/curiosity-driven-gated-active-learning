@@ -1,6 +1,8 @@
 # Quality-Controlled Active Learning for Autonomous Microscopy
 
-This repository contains the code for **ActiveQC** (Active Learning with Quality Control), a gated active learning framework for robust structure-property learning in autonomous microscopy experiments.
+This repository contains the code for the paper [*Quality-controlled active learning via Gaussian processes for robust structure–property learning in autonomous microscopy*](https://doi.org/10.1038/s41524-026-02248-x), npj Computational Materials (2026).
+
+It implements **ActiveQC** (Active Learning with Quality Control), a gated active learning framework for robust structure-property learning in autonomous microscopy experiments.
 
 ## Overview
 
@@ -19,7 +21,10 @@ The method is evaluated on two bidirectional structure-property tasks:
 The experiments use paired structural and spectroscopic measurements from ferroelectric thin films:
 - **PbTiO3** thin films (pre-acquired BEPS dataset with simulated noise) and separate heterogeneous **PbTiO3** thin films with richer domain structures (real-time AFM deployment)
 
-Data should be placed in the `inputs/data/` directory. Download from: [TBD - DOI link to be added upon publication]
+All data are available on Zenodo: [https://doi.org/10.5281/zenodo.18881435](https://doi.org/10.5281/zenodo.18881435)
+
+- Pre-acquired dataset (`BEPS_1d7um_0009.h5`) → `inputs/data/`
+- Real-time AFM deployment runs (`v2`, `v2b`, `v2c`, `v2d`, `v2e`, `v2f`) → `real_time_afm/inputs/data_PTO/`
 
 ## Repository Structure
 
@@ -42,6 +47,11 @@ Data should be placed in the `inputs/data/` directory. Download from: [TBD - DOI
 ├── utils.py                         # Utility functions
 ├── inputs/                          # Input data directory
 └── real_time_afm/                   # Real-time AFM deployment code
+    ├── execution_im2spec_PTO.ipynb  # ActiveQC run on the microscope
+    ├── analysis_im2spec_PTO.ipynb   # Analysis of the real-time runs
+    ├── models.py
+    ├── utils.py
+    └── inputs/data_PTO/             # Real-time run data
 ```
 
 ## Requirements
@@ -73,8 +83,17 @@ For Spec2Im experiments:
 python 11_exp_spec2im_multiRun.py
 ```
 
+For sensitivity analysis of the quality threshold:
+```bash
+python 13_exp_im2spec_sensitivity.py
+python 14_exp_spec2im_sensitivity.py
+```
+
 ### Results Analysis
 Use `8_exp_im2spec_results.ipynb` and `12_exp_spec2im_results.ipynb` to analyze results.
+
+### Real-time AFM Deployment
+`real_time_afm/execution_im2spec_PTO.ipynb` runs ActiveQC on the microscope (requires the instrument and [AEcroscoPy](https://github.com/pycroscopy/aecroscopy)). `real_time_afm/analysis_im2spec_PTO.ipynb` analyzes the recorded runs in `real_time_afm/inputs/data_PTO/`.
 
 ## Acquisition Strategies Compared
 
@@ -87,16 +106,17 @@ Use `8_exp_im2spec_results.ipynb` and `12_exp_spec2im_results.ipynb` to analyze 
 
 ## Citation
 
-If you use this code, please cite: TBD
+If you use this code, please cite:
 
-<!-- ```bibtex
+```bibtex
 @article{chowdhury2026activeqc,
-  title={Quality-Controlled Active Learning via Gaussian Processes for Robust Structure-Property Learning in Autonomous Microscopy},
-  author={Chowdhury, Jawad and Narasimha, Ganesh and Yang, Jan-Chi and Liu, Yongtao and Vasudevan, Rama},
-  journal={},
-  year={2026}
+  title={Quality-controlled active learning via Gaussian processes for robust structure--property learning in autonomous microscopy},
+  author={Chowdhury, Jawad and Narasimha, Ganesh and Yang, Jan-Chi and Funakubo, Hiroshi and Ehara, Yoshitaka and Liu, Yongtao and Vasudevan, Rama},
+  journal={npj Computational Materials},
+  year={2026},
+  doi={10.1038/s41524-026-02248-x}
 }
-``` -->
+```
 
 ## License
 
