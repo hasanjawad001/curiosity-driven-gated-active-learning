@@ -23,8 +23,16 @@ The experiments use paired structural and spectroscopic measurements from ferroe
 
 All data are available on Zenodo: [https://doi.org/10.5281/zenodo.18881435](https://doi.org/10.5281/zenodo.18881435)
 
-- Pre-acquired dataset (`BEPS_1d7um_0009.h5`) → `inputs/data/`
-- Real-time AFM deployment runs (`v2`, `v2b`, `v2c`, `v2d`, `v2e`, `v2f`) → `real_time_afm/inputs/data_PTO/`
+- Pre-acquired dataset (`BEPS_1d7um_0009.h5`) → `inputs/data/`. On Zenodo it is split into 12 parts (`BEPS_1d7um_0009.h5.part_00` … `part_11`); download all parts and `BEPS_1d7um_0009.h5.md5`, then merge and verify:
+  ```bash
+  cat BEPS_1d7um_0009.h5.part_* > BEPS_1d7um_0009.h5
+  md5sum -c BEPS_1d7um_0009.h5.md5
+  ```
+  On Windows (Python):
+  ```bash
+  python -c "import glob,shutil; out=open('BEPS_1d7um_0009.h5','wb'); [shutil.copyfileobj(open(p,'rb'),out) for p in sorted(glob.glob('BEPS_1d7um_0009.h5.part_*'))]"
+  ```
+- Real-time AFM deployment runs (`data_PTO.zip`: `v2`, `v2b`, `v2c`, `v2d`, `v2e`, `v2f`) → unzip into `real_time_afm/inputs/` (creates `real_time_afm/inputs/data_PTO/`)
 
 ## Repository Structure
 
